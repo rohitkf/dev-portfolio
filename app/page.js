@@ -7,15 +7,13 @@ import Experience from "@/components/Experience"
 
 export default async function Home() {
   return (
-    <>
-      <div>
-        <OpenToWork />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <ContactMe />
-      </div>
-    </>
+    <div>
+      <OpenToWork />
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <ContactMe />
+    </div>
   )
 }

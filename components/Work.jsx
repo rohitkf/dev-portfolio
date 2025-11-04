@@ -1,23 +1,8 @@
 "use client"
 import { useState } from "react"
 import ContentfulImage from "./ui/ContentfulImage"
-import IconImage from "./ui/IconImage"
 import { motion } from "framer-motion"
 
-const LinkButton = ({ link, imageSrc }) => {
-  return (
-    <>
-      <a
-        href={link}
-        className={`group flex size-8 w-1/5 items-center justify-center rounded-xl bg-gray-100 p-1 text-gray-950 *:select-none hover:bg-gray-200/75 active:bg-gray-100 disabled:border disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-950 *:disabled:opacity-20 dark:bg-gray-500/10 dark:text-white dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white [&>*:not(.sr-only)]:relative`}
-      >
-        <span className="sr-only">Kaggle</span>
-
-        <IconImage src={imageSrc} />
-      </a>
-    </>
-  )
-}
 export default function Work({ post }) {
   const stringLength = 100
   const [isExpanded, setIsExpanded] = useState(false)
@@ -77,7 +62,7 @@ export default function Work({ post }) {
                   <br />
                   <button
                     onClick={toggleDescription}
-                    class="mt-1 font-bold text-white underline underline-offset-[6px] hover:text-yellow-500"
+                    className="mt-1 font-bold text-white underline underline-offset-[6px] hover:text-yellow-500"
                   >
                     {isExpanded ? "Show Less" : "Show More"}
                   </button>
@@ -109,6 +94,7 @@ export default function Work({ post }) {
                 <a
                   href={post.liveURL}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex h-[63px] items-center justify-center gap-1.5 rounded-xl bg-gray-100 px-3.5 text-gray-950 *:select-none hover:bg-gray-200/75 active:bg-gray-100 disabled:border disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-950 *:disabled:opacity-20 dark:bg-gray-500/10 dark:text-white dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white [&>*:not(.sr-only)]:relative"
                 >
                   <span>View Demo</span>
@@ -150,6 +136,7 @@ export default function Work({ post }) {
                   <a
                     href={post.githubUrl}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex size-16 h-[63px] w-[113px] items-center justify-center rounded-xl bg-gray-100 text-gray-950 *:select-none hover:bg-gray-200/75 active:bg-gray-100 disabled:border disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-950 *:disabled:opacity-20 dark:bg-gray-500/10 dark:text-white dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white [&>*:not(.sr-only)]:relative"
                   >
                     <span className="sr-only">Source Code</span>
@@ -175,6 +162,7 @@ export default function Work({ post }) {
                 <a
                   href={post?.kaggleUrl}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="w-15 group flex size-9 w-[90px] items-center justify-center rounded-xl bg-gray-100 text-gray-950 *:select-none hover:bg-gray-200/75 active:bg-gray-100 disabled:border disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-950 *:disabled:opacity-20 dark:bg-gray-500/10 dark:text-white dark:hover:bg-gray-500/15 dark:active:bg-gray-500/10 dark:disabled:border-gray-800/50 disabled:dark:bg-gray-900 dark:*:disabled:!text-white [&>*:not(.sr-only)]:relative"
                 >
                   <span className="sr-only">Kaggle</span>
