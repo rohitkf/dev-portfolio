@@ -17,15 +17,16 @@ function ContactMe() {
         id="contacts"
         className="flex-center relative flex-wrap gap-16 bg-gray-900 p-10"
       >
-        {socials.map((social, index) => (
+        {socials.map((social) => (
           <div
-            key={index}
+            key={social.platform}
             id="contact"
             className="hover:underline hover:underline-offset-4"
           >
             <a
               href={social.link}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex-center flex-wrap gap-3"
             >
               {/* GITHUB */}

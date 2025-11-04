@@ -23,10 +23,10 @@ function Skills() {
           <div className="mx-auto  max-w-[900px] overflow-x-auto px-10">
             {/* ICONS SECTION */}
             <div className="flex flex-wrap gap-6">
-              {images.map((image, index) => (
+              {images.map((image) => (
                 <div
                   className="card-box flex flex-col p-3 md:size-32"
-                  key={index}
+                  key={image}
                 >
                   <IconImage
                     className="flex-center gap-3"
